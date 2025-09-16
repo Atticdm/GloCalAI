@@ -1,0 +1,87 @@
+{
+  "$schema": "https://railway.app/railway.schema.json",
+  "build": [
+    {
+      "service": "api",
+      "path": ".",
+      "dockerfilePath": "infrastructure/docker/api.Dockerfile"
+    },
+    {
+      "service": "frontend",
+      "path": ".",
+      "dockerfilePath": "infrastructure/docker/frontend.Dockerfile"
+    },
+    {
+      "service": "orchestrator",
+      "path": ".",
+      "dockerfilePath": "infrastructure/docker/python-service.Dockerfile",
+      "dockerfileBuildArgs": {
+        "SERVICE_NAME": "orchestrator"
+      }
+    },
+    {
+      "service": "asr-agent",
+      "path": ".",
+      "dockerfilePath": "infrastructure/docker/python-service.Dockerfile",
+      "dockerfileBuildArgs": {
+        "SERVICE_NAME": "asr-agent"
+      }
+    },
+    {
+      "service": "translate-agent",
+      "path": ".",
+      "dockerfilePath": "infrastructure/docker/python-service.Dockerfile",
+      "dockerfileBuildArgs": {
+        "SERVICE_NAME": "translate-agent"
+      }
+    },
+    {
+      "service": "tts-agent",
+      "path": ".",
+      "dockerfilePath": "infrastructure/docker/python-service.Dockerfile",
+      "dockerfileBuildArgs": {
+        "SERVICE_NAME": "tts-agent"
+      }
+    },
+    {
+      "service": "mix-agent",
+      "path": ".",
+      "dockerfilePath": "infrastructure/docker/python-service.Dockerfile",
+      "dockerfileBuildArgs": {
+        "SERVICE_NAME": "mix-agent"
+      }
+    },
+    {
+      "service": "subs-agent",
+      "path": ".",
+      "dockerfilePath": "infrastructure/docker/python-service.Dockerfile",
+      "dockerfileBuildArgs": {
+        "SERVICE_NAME": "subs-agent"
+      }
+    },
+    {
+      "service": "textinframe-agent",
+      "path": ".",
+      "dockerfilePath": "infrastructure/docker/python-service.Dockerfile",
+      "dockerfileBuildArgs": {
+        "SERVICE_NAME": "textinframe-agent"
+      }
+    },
+    {
+      "service": "qc-agent",
+      "path": ".",
+      "dockerfilePath": "infrastructure/docker/python-service.Dockerfile",
+      "dockerfileBuildArgs": {
+        "SERVICE_NAME": "qc-agent"
+      }
+    },
+    {
+      "service": "yt-uploader",
+      "path": ".",
+      "dockerfilePath": "infrastructure/docker/python-service.Dockerfile",
+      "dockerfileBuildArgs": {
+        "SERVICE_NAME": "yt-uploader"
+      }
+    }
+  ]
+}
