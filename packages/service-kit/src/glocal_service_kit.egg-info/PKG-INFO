@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: glocal-service-kit
+Version: 0.1.0
+Summary: Utilities shared across Glocal Ads AI services
+Author: GloCal
+Requires-Python: >=3.11
+Requires-Dist: aio-pika>=9.4.1
+Requires-Dist: boto3>=1.34.23
+Requires-Dist: asyncpg>=0.29.0
+Requires-Dist: redis>=5.0.1
+Requires-Dist: sqlalchemy>=2.0.25
+Requires-Dist: pydantic>=2.5.0

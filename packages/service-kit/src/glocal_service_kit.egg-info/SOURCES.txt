@@ -1,0 +1,14 @@
+pyproject.toml
+src/glocal_service_kit/__init__.py
+src/glocal_service_kit/config.py
+src/glocal_service_kit/db.py
+src/glocal_service_kit/messaging.py
+src/glocal_service_kit/paths.py
+src/glocal_service_kit/progress.py
+src/glocal_service_kit/s3_utils.py
+src/glocal_service_kit/storage.py
+src/glocal_service_kit.egg-info/PKG-INFO
+src/glocal_service_kit.egg-info/SOURCES.txt
+src/glocal_service_kit.egg-info/dependency_links.txt
+src/glocal_service_kit.egg-info/requires.txt
+src/glocal_service_kit.egg-info/top_level.txt

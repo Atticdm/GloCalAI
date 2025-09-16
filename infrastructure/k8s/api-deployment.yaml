@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: glocal-api
+  labels:
+    app: glocal-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: glocal-api
+  template:
+    metadata:
+      labels:
+        app: glocal-api
+    spec:
+      containers:
+        - name: api
+          image: ghcr.io/example/glocal-api:latest
+          envFrom:
+            - secretRef:
+                name: glocal-env
+          ports:
+            - containerPort: 8080
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: 8080
+            periodSeconds: 10
+            failureThreshold: 3
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: glocal-api
+spec:
+  selector:
+    app: glocal-api
+  ports:
+    - name: http
+      port: 80
+      targetPort: 8080

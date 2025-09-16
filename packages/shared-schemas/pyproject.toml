@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=62", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "glocal_shared_schemas"
+version = "0.1.0"
+description = "Shared Pydantic models for Glocal Ads AI"
+authors = [{name = "GloCal"}]
+requires-python = ">=3.11"
+dependencies = [
+    "pydantic>=2.5.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,7 @@
+aio-pika==9.4.1
+asyncpg==0.29.0
+boto3==1.34.23
+pydantic==2.5.3
+redis==5.0.1
+-e ../../packages/service-kit
+-e ../../packages/shared-schemas

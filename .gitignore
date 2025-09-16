@@ -1,0 +1,34 @@
+# Node
+node_modules
+.pnpm-store
+.next
+out
+
+# Python
+__pycache__
+*.pyc
+.venv
+venv
+.envrc
+
+# macOS
+.DS_Store
+
+# Docker
+*.log
+
+# IDE
+.idea
+.vscode
+
+# Build artifacts
+coverage
+.mypy_cache
+ruff_cache
+
+# Python lock
+poetry.lock
+pip-wheel-metadata
+
+# Misc
+.env
